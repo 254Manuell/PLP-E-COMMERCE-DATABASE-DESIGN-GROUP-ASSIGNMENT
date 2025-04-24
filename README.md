@@ -1,20 +1,15 @@
 # 📦 E-commerce Database Design - Peer Group Assignment
 
 ## 🎯 Objective
-Design an Entity-Relationship Diagram (ERD) and collaboratively build a scalable e-commerce database. Master database architecture by defining entities, relationships, and constraints while ensuring efficient data flow.
+The ERD for this e-commerce platform defines a normalized relational database structure centered around core entities like **Product** (stores product details), **Product Category** (hierarchical classification), and **Brand** (manufacturer data). It integrates dynamic relationships such as **Product Variation** (size/color options) → **Product Item** (unique SKUs for purchase), supported by attribute flexibility via **Product Attribute** (custom metadata) and **Attribute Category/Type** (grouping and data typing). Critical linkages include foreign keys between `product` ↔ `product_variation` (one-to-many), `product_item` ↔ `size_option/color` (many-to-one), and `product_attribute` ↔ `attribute_category` (categorization). The design ensures scalability for diverse e-commerce use cases while maintaining data integrity through constraints and indexes.  
 
 ---
 
 ## 🛠️ Instructions
 
 ### 1️⃣ Create an ERD ✍️
-- **Entities & Attributes**:  
-  - Map tables based on the provided structure ([image.png](image.png)) and the listed tables below.  
-  - Example: `product_attribute` (from the task) aligns with **Product Attribute** (from the image), which includes `Site Category`, `Product Image`, and `Site Option`.  
-- **Relationships**:  
-  - Define connections (e.g., `product` ↔ `product_variation` ↔ `product_item`).  
-  - Use **primary keys** (e.g., `product_id`) and **foreign keys** for relationships.  
-- **Tools**: Use [dbdiagram.io](https://dbdiagram.io), [draw.io](https://draw.io), or similar.  
+![image alt](https://github.com/254Manuell/PLP-E-COMMERCE-DATABASE-DESIGN-GROUP-ASSIGNMENT/blob/5e7f5f177089f38f40fabf5a8e90c822b6b419e2/ERDDD.drawio.png)
+
 
 ### 2️⃣ Plan the Data Flow 🔄
 - Example Flow:  
@@ -24,8 +19,9 @@ Design an Entity-Relationship Diagram (ERD) and collaboratively build a scalable
   4. Custom attributes (e.g., "Material: Leather") are stored in `product_attribute`, categorized by `attribute_category` and `attribute_type`.  
 
 ### 3️⃣ Group Collaboration 🤝
-- Split tasks: One member designs the `product`-`brand` relationship, another drafts `attribute_type` logic, etc.  
-- Use **GitHub Projects** for task tracking and **Discord/Zoom** for daily syncs.  
-
-### 4️⃣ Submission 🚀
-- **Repository Structure**:  
+- Split tasks amongst all group members and worked collaboratively via Google Meet.  
+- Use **GitHub** for *Version Control* and Our *WhatsApp group* for .  
+Memebers included;
+1. Emmanuel Ngunnzi(Group Leader) @254Manuell
+2. Brilliant Mwendwa @BrillyWam
+3. Eugene Ambagwa @ambagwa 
