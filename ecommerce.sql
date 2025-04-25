@@ -32,7 +32,8 @@ CREATE TABLE product (
 -- 4. product_image table
 CREATE TABLE product_image (
     image_id SERIAL PRIMARY KEY,
-    product_id INTEGER REFERENCES product(product_id) ON DELETE CASCADE,
+    product_id INTEGER REFERENCES product(product_id) 
+    ON DELETE CASCADE,
     image_url TEXT NOT NULL,
     alt_text VARCHAR(255)
 );
@@ -40,7 +41,8 @@ CREATE TABLE product_image (
 -- 5. product_item table
 CREATE TABLE product_item (
     item_id SERIAL PRIMARY KEY,
-    product_id INTEGER REFERENCES product(product_id) ON DELETE CASCADE,
+    product_id INTEGER REFERENCES product(product_id) 
+    ON DELETE CASCADE,
     sku VARCHAR(100) NOT NULL UNIQUE,
     price DECIMAL(10,2),
     stock_quantity INTEGER
@@ -70,7 +72,8 @@ CREATE TABLE size_option (
 -- 9. product_variation table
 CREATE TABLE product_variation (
     variation_id SERIAL PRIMARY KEY,
-    item_id INTEGER REFERENCES product_item(item_id) ON DELETE CASCADE,
+    item_id INTEGER REFERENCES product_item(item_id) 
+    ON DELETE CASCADE,
     color_id INTEGER REFERENCES color(color_id),
     size_id INTEGER REFERENCES size_option(size_id)
 );
